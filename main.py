@@ -82,6 +82,34 @@ class Sudoku:
                     pygame.quit()
                     return
 
+    def checkRows(self,arr):
+         arr[1] = {{1,2,3,4,5,6,7,8,9}}
+         arr[2] = {{1,2,3,4,5,6,7,8,9}}
+         arr[3] = {{1,2,3,4,5,6,7,8,9}}
+         arr[4] = {{1,2,3,4,5,6,7,8,9}}
+         arr[5] = {{1,2,3,4,5,6,7,8,9}}
+         arr[6] = {{1,2,3,4,5,6,7,8,9}}
+         arr[7] = {{1,2,3,4,5,6,7,8,9}}
+         arr[8] = {{1,2,3,4,5,6,7,8,9}}
+         arr[9] = {{1,2,3,4,5,6,7,8,9}}
+
+
+    def checkCols(self,arr):
+
+        arr[1] = {{1,2,3,4,5,6,7,8,9}}
+        arr[2] = {{1,2,3,4,5,6,7,8,9}}
+        arr[3] = {{1,2,3,4,5,6,7,8,9}}
+        arr[4] = {{1,2,3,4,5,6,7,8,9}}
+        arr[5] = {{1,2,3,4,5,6,7,8,9}}
+        arr[6] = {{1,2,3,4,5,6,7,8,9}}
+        arr[7] = {{1,2,3,4,5,6,7,8,9}}
+        arr[8] = {{1,2,3,4,5,6,7,8,9}}
+        arr[9] = {{1,2,3,4,5,6,7,8,9}}
+
+    def checkSquares(self,arr):
+        arr[3][3] = {{123},{456},{789}}
+
+
 class Sudoku_Checker():
   def __init__(self,board):
     self.board = board
@@ -91,9 +119,8 @@ class Sudoku_Checker():
     Sudoku.checkCols(board)
     Sudoku.checkSquares(board)
 
-    return checkRows() == True and checkCols() == True and checkSquares() == True
+    return Sudoku.checkRows() == True and Sudoku.checkCols() == True and Sudoku.checkSquares() == True
  
-    main()
 
 if __name__=='__main__':
     Sudoku.main()
